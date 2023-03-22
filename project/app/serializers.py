@@ -21,8 +21,3 @@ class DepartmentSerializer(serializers.Serializer):
     id = serializers.ReadOnlyField()
     name = serializers.CharField(max_length=100)
     manager = EmployeeSerializer()
-
-    # def create(self, data):
-    #     dept_id = data.pop('manager')
-    #     data['dept'] = Department.objects.get(id=dept_id)
-    #     return Employee.objects.create(**data)
